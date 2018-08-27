@@ -1,11 +1,18 @@
+---
 swagger: "2.0"
 x-collection-name: Predix
-x-complete: 1
+x-complete: 0
 info:
-  title: VIEWS
+  title: Predix Analytics Runtime Get the descriptive information of the orchestration
+    artifacts corresponding to an orchestration configuration entry.
   version: 1.0.0
-host: thetaray-anomaly-service.run.aws-usw02-pr.ice.predix.io
-basePath: /v1
+  description: 'Returns the description information (type, description, etc.) for
+    all orchestration artifacts associated with the given configuration entry id.
+    Note: it does not return the orchestration artifact file contents; use the download
+    APIs to obtain an artifact file. An error is returned if the supplied orchestration
+    configuration entry id does not exist.'
+host: predix-acs.run.aws-usw02-pr.ice.predix.io
+basePath: /
 schemes:
 - http
 produces:
@@ -78,3 +85,17 @@ paths:
       - Orchestration
       - Configuration
       - Entry
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
+---
